@@ -173,6 +173,16 @@ function reset_dice() {
 
 /* Roll dice */
 
+function randomiseDiceImage(diceElement) {
+  let randHeight = Math.trunc(Math.random() * 5);
+  let randWidth = Math.trunc(Math.random() * 5);
+  let randAngle = Math.trunc(Math.random() * 90);
+
+  diceElement.style.top = `${randHeight}vw`;
+  diceElement.style.left = `${randWidth}vw`;
+  diceElement.style.transform = `rotate(${randAngle}deg)`;
+}
+
 function rollDice() {
   if (rollsLeft === 3) {
     switchPlayer();
@@ -184,6 +194,7 @@ function rollDice() {
       console.log(`Result is ${result}`);
       diceValues[i] = result;
       const diceElement = document.querySelector(`.dice${i}`);
+      randomiseDiceImage(diceElement);
       diceElement.classList.remove("hidden");
       diceElement.src = `resources/images/dice-${diceValues[i]}.png`;
     }
@@ -203,7 +214,7 @@ rollBtn.addEventListener("click", function () {
 function holdDie(diceXEl, diceNumber) {
   diceXEl.classList.toggle("hold");
   if (diceXEl.classList.contains("hold")) {
-    heldDice[diceNumber] = diceValues[0];
+    heldDice[diceNumber] = diceValues[diceNumber];
   } else {
     heldDice[diceNumber] = 0;
   }

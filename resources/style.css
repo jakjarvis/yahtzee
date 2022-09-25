@@ -1,7 +1,11 @@
 body {
-  background-color: darkorange;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("images/pexels-barnabas-davoti-11556304.jpg");
+  background-size: cover;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-family: "Luminari", sans-serif;
 }
 
 /* Board layout */
@@ -12,12 +16,12 @@ body {
 
 .game_board {
   display: flex;
+  justify-content: center;
 }
 
 .score_zone {
-  max-width: 50vw;
   display: block;
-  background-color: aliceblue;
+  background-color: #fcf5e5;
 }
 
 .middle {
@@ -39,6 +43,31 @@ body {
 
 .active {
   color: red;
+}
+
+table {
+  border: 1px solid;
+}
+
+.heading-line {
+  font-size: 130%;
+  font-weight: bold;
+  background-color: #e7c9a9;
+}
+
+.total-line {
+  font-style: italic;
+  background-color: #fdd9b5;
+}
+
+.grand-total-line {
+  font-weight: bold;
+  font-style: italic;
+  background-color: #e7c9a9;
+}
+
+.scoring {
+  font-size: 70%;
 }
 
 /* Middle styling */
@@ -86,6 +115,11 @@ body {
   flex-direction: column;
 }
 
+.btn {
+  font-family: inherit;
+  background-color: #e7c9a9;
+}
+
 .rolls-counter {
   position: absolute;
   top: 35vw;
@@ -94,12 +128,14 @@ body {
   display: flex;
   flex-direction: row;
   align-content: center;
+  color: #fff;
 }
 
 .rolls-remaining {
   margin-left: 10px;
   align-content: center;
   justify-content: center;
+  color: #fff;
 }
 
 /* Dice styling */
@@ -111,8 +147,14 @@ body {
   width: 5vw;
   height: auto;
   position: absolute;
-  left: 2vw;
+  /*left: 2vw;
+  top: 2vw;*/
+}
+
+.dice0 {
   top: 2vw;
+  left: 2vw;
+  transform: rotate(30deg);
 }
 
 .hold {
