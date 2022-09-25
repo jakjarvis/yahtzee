@@ -1,6 +1,7 @@
 <head>
   <title>Yahtzee!</title>
   <link rel="stylesheet" href="resources/style.css" />
+  <link href="http://fonts.cdnfonts.com/css/luminari" rel="stylesheet" />
 </head>
 
 <body>
@@ -11,134 +12,135 @@
   <div class="game_board">
     <div class="score_zone">
       <table class="score_card">
-        <tr class="titles">
+        <tr class="heading-line">
           <th>Catagory</th>
           <th>Scoring</th>
           <th class="player1_name active">Player 1</th>
           <th class="player2_name">Player 2</th>
         </tr>
-        <tr class="headings">
+        <tr class="heading-line">
           <th>Top Section</th>
           <th></th>
           <th></th>
           <th></th>
         </tr>
-        <tr class="lines">
+        <tr class="score-line">
           <th>1s</th>
-          <th>Sum of all ones thrown</th>
+          <th class="scoring">Sum of all ones thrown</th>
           <th class="ones onesP1"></th>
           <th class="ones onesP2"></th>
         </tr>
-        <tr class="scores">
+        <tr class="score-line">
           <th>2s</th>
-          <th>Sum of all twos thrown</th>
+          <th class="scoring">Sum of all twos thrown</th>
           <th class="score twosP1"></th>
           <th class="score twosP2"></th>
         </tr>
-        <tr class="scores">
+        <tr class="score-line">
           <th>3s</th>
-          <th>Sum of all threes thrown</th>
+          <th class="scoring">Sum of all threes thrown</th>
           <th class="score threesP1"></th>
           <th class="score threesP2"></th>
         </tr>
-        <tr class="scores">
+        <tr class="score-line">
           <th>4s</th>
-          <th>Sum of all fours thrown</th>
+          <th class="scoring">Sum of all fours thrown</th>
           <th class="score foursP1"></th>
           <th class="score foursP2"></th>
         </tr>
-        <tr class="scores">
+        <tr class="score-line">
           <th>5s</th>
-          <th>Sum of all fives thrown</th>
+          <th class="scoring">Sum of all fives thrown</th>
           <th class="score fivesP1"></th>
           <th class="score fivesP2"></th>
         </tr>
-        <tr class="scores">
+        <tr class="score-line">
           <th>6s</th>
-          <th>Sum of all sixes thrown</th>
+          <th class="scoring">Sum of all sixes thrown</th>
           <th class="score sixesP1"></th>
           <th class="score sixesP2"></th>
         </tr>
-        <tr class="totals">
+        <tr class="total-line">
           <th>Score</th>
-          <th>--></th>
+          <th class="scoring">--></th>
           <th class="score top_initialP1"></th>
           <th class="score top_initialP2"></th>
         </tr>
-        <tr class="totals">
+        <tr class="total-line">
           <th>Bonus</th>
-          <th>If top section score >= 63</th>
+          <th class="scoring">If top section score >= 63</th>
           <th class="score top_bonusP1"></th>
           <th class="score top_bonusP2"></th>
         </tr>
-        <tr class="totals">
+        <tr class="total-line">
           <th>Total</th>
-          <th>--></th>
+          <th class="scoring">--></th>
           <th class="score top_totalP1"></th>
           <th class="score top_totalP2"></th>
         </tr>
-        <tr class="headings">
+        <tr class="heading-line">
           <th>Bottom Section</th>
           <th></th>
           <th></th>
+          <th></th>
         </tr>
-        <tr class="scores">
+        <tr class="score-line">
           <th>3 of a kind</th>
-          <th>Total of all dice</th>
+          <th class="scoring">Total of all dice</th>
           <th class="score kind_3P1"></th>
           <th class="score kind_3P2"></th>
         </tr>
-        <tr class="scores">
+        <tr class="score-line">
           <th>4 of a kind</th>
-          <th>Total of all dice</th>
+          <th class="scoring">Total of all dice</th>
           <th class="score kind_4P1"></th>
           <th class="score kind_4P2"></th>
         </tr>
-        <tr class="scores">
+        <tr class="score-line">
           <th>Full House</th>
-          <th>Score 25</th>
+          <th class="scoring">Score 25</th>
           <th class="score full_houseP1"></th>
           <th class="score full_houseP2"></th>
         </tr>
-        <tr class="scores">
+        <tr class="score-line">
           <th>Short Straight</th>
-          <th>Score 30</th>
+          <th class="scoring">Score 30</th>
           <th class="score short_straightP1"></th>
           <th class="score short_straightP2"></th>
         </tr>
-        <tr class="scores">
+        <tr class="score-line">
           <th>Long Straight</th>
-          <th>Score 40</th>
+          <th class="scoring">Score 40</th>
           <th class="score long_straightP1"></th>
           <th class="score long_straightP2"></th>
         </tr>
-        <tr class="scores">
+        <tr class="score-line">
           <th>Yahtzee</th>
-          <th>Score 50</th>
+          <th class="scoring">Score 50</th>
           <th class="score yahtzeeP1"></th>
           <th class="score yahtzeeP2"></th>
         </tr>
-        <tr class="scores">
+        <tr class="score-line">
           <th>Chance</th>
-          <th>Total of all dice</th>
+          <th class="scoring">Total of all dice</th>
           <th class="score chanceP1"></th>
           <th class="score chanceP2"></th>
         </tr>
-        <tr class="totals">
+        <tr class="total-line">
           <th>Bottom Section Total</th>
-          <th>--></th>
+          <th class="scoring">--></th>
           <th class="score bottom_totalP1"></th>
           <th class="score bottom_totalP2"></th>
         </tr>
-        <tr class="totals">
+        <tr class="total-line">
           <th>Top Section Total</th>
-          <th>--></th>
+          <th class="scoring">--></th>
           <th class="score top_totalP1"></th>
           <th class="score top_totalP2"></th>
         </tr>
-        <tr class="totals">
+        <tr class="grand-total-line">
           <th>Grand Total</th>
-          <th>--></th>
+          <th class="scoring">--></th>
           <th class="score grand_totalP1"></th>
           <th class="score grand_totalP2"></th>
         </tr>
