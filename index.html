@@ -1,0 +1,196 @@
+<head>
+  <title>Yahtzee!</title>
+  <link rel="stylesheet" href="resources/style.css" />
+</head>
+
+<body>
+  <div class="title_bar">
+    <h1>Yahtzee!</h1>
+    <h4>Beta version</h4>
+  </div>
+  <div class="game_board">
+    <div class="score_zone">
+      <table class="score_card">
+        <tr class="titles">
+          <th>Catagory</th>
+          <th>Scoring</th>
+          <th class="player1_name active">Player 1</th>
+          <th class="player2_name">Player 2</th>
+        </tr>
+        <tr class="headings">
+          <th>Top Section</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr class="lines">
+          <th>1s</th>
+          <th>Sum of all ones thrown</th>
+          <th class="ones onesP1"></th>
+          <th class="ones onesP2"></th>
+        </tr>
+        <tr class="scores">
+          <th>2s</th>
+          <th>Sum of all twos thrown</th>
+          <th class="score twosP1"></th>
+          <th class="score twosP2"></th>
+        </tr>
+        <tr class="scores">
+          <th>3s</th>
+          <th>Sum of all threes thrown</th>
+          <th class="score threesP1"></th>
+          <th class="score threesP2"></th>
+        </tr>
+        <tr class="scores">
+          <th>4s</th>
+          <th>Sum of all fours thrown</th>
+          <th class="score foursP1"></th>
+          <th class="score foursP2"></th>
+        </tr>
+        <tr class="scores">
+          <th>5s</th>
+          <th>Sum of all fives thrown</th>
+          <th class="score fivesP1"></th>
+          <th class="score fivesP2"></th>
+        </tr>
+        <tr class="scores">
+          <th>6s</th>
+          <th>Sum of all sixes thrown</th>
+          <th class="score sixesP1"></th>
+          <th class="score sixesP2"></th>
+        </tr>
+        <tr class="totals">
+          <th>Score</th>
+          <th>--></th>
+          <th class="score top_initialP1"></th>
+          <th class="score top_initialP2"></th>
+        </tr>
+        <tr class="totals">
+          <th>Bonus</th>
+          <th>If top section score >= 63</th>
+          <th class="score top_bonusP1"></th>
+          <th class="score top_bonusP2"></th>
+        </tr>
+        <tr class="totals">
+          <th>Total</th>
+          <th>--></th>
+          <th class="score top_totalP1"></th>
+          <th class="score top_totalP2"></th>
+        </tr>
+        <tr class="headings">
+          <th>Bottom Section</th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr class="scores">
+          <th>3 of a kind</th>
+          <th>Total of all dice</th>
+          <th class="score kind_3P1"></th>
+          <th class="score kind_3P2"></th>
+        </tr>
+        <tr class="scores">
+          <th>4 of a kind</th>
+          <th>Total of all dice</th>
+          <th class="score kind_4P1"></th>
+          <th class="score kind_4P2"></th>
+        </tr>
+        <tr class="scores">
+          <th>Full House</th>
+          <th>Score 25</th>
+          <th class="score full_houseP1"></th>
+          <th class="score full_houseP2"></th>
+        </tr>
+        <tr class="scores">
+          <th>Short Straight</th>
+          <th>Score 30</th>
+          <th class="score short_straightP1"></th>
+          <th class="score short_straightP2"></th>
+        </tr>
+        <tr class="scores">
+          <th>Long Straight</th>
+          <th>Score 40</th>
+          <th class="score long_straightP1"></th>
+          <th class="score long_straightP2"></th>
+        </tr>
+        <tr class="scores">
+          <th>Yahtzee</th>
+          <th>Score 50</th>
+          <th class="score yahtzeeP1"></th>
+          <th class="score yahtzeeP2"></th>
+        </tr>
+        <tr class="scores">
+          <th>Chance</th>
+          <th>Total of all dice</th>
+          <th class="score chanceP1"></th>
+          <th class="score chanceP2"></th>
+        </tr>
+        <tr class="totals">
+          <th>Bottom Section Total</th>
+          <th>--></th>
+          <th class="score bottom_totalP1"></th>
+          <th class="score bottom_totalP2"></th>
+        </tr>
+        <tr class="totals">
+          <th>Top Section Total</th>
+          <th>--></th>
+          <th class="score top_totalP1"></th>
+          <th class="score top_totalP2"></th>
+        </tr>
+        <tr class="totals">
+          <th>Grand Total</th>
+          <th>--></th>
+          <th class="score grand_totalP1"></th>
+          <th class="score grand_totalP2"></th>
+        </tr>
+      </table>
+    </div>
+    <div class="zone middle">
+      <div class="dice_mat">
+        <div class="mat mat0">
+          <img
+            src="resources/images/dice-1.png"
+            alt="Dice 0"
+            class="dice dice0 hidden"
+          />
+        </div>
+        <div class="mat mat1">
+          <img
+            src="resources/images/dice-2.png"
+            alt="Dice 1"
+            class="dice dice1 hidden"
+          />
+        </div>
+        <div class="mat mat2">
+          <img
+            src="resources/images/dice-3.png"
+            alt="Dice 2"
+            class="dice dice2 hidden"
+          />
+        </div>
+        <div class="mat mat3">
+          <img
+            src="resources/images/dice-4.png"
+            alt="Dice 3"
+            class="dice dice3 hidden"
+          />
+        </div>
+        <div class="mat mat4">
+          <img
+            src="resources/images/dice-5.png"
+            alt="Dice 4"
+            class="dice dice4 hidden"
+          />
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="btn btn-roll">Roll</button>
+        <button class="btn btn-reset hidden">Play Again?</button>
+      </div>
+      <div class="rolls-counter">
+        <p class="rolls-text">Rolls remaining:</p>
+        <p class="rolls-remaining">3</p>
+      </div>
+    </div>
+  </div>
+  <script src="resources/script.js"></script>
+</body>

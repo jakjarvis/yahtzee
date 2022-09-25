@@ -1,0 +1,120 @@
+body {
+  background-color: darkorange;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* Board layout */
+.title_bar {
+  width: 100%;
+  text-align: center;
+}
+
+.game_board {
+  display: flex;
+}
+
+.score_zone {
+  max-width: 50vw;
+  display: block;
+  background-color: aliceblue;
+}
+
+.middle {
+  width: 30vw;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Scoreboard styling */
+.legal {
+  background-color: lightgreen;
+}
+
+.nullable {
+  background-color: lightcoral;
+}
+
+.active {
+  color: red;
+}
+
+/* Middle styling */
+.mat {
+  max-width: 10vw;
+  max-height: 10vw;
+}
+
+.mat0 {
+  position: absolute;
+  top: 5vw;
+  left: 0;
+}
+
+.mat1 {
+  position: absolute;
+  top: 0;
+  left: 10vw;
+}
+
+.mat2 {
+  position: absolute;
+  top: 5vw;
+  left: 20vw;
+}
+
+.mat3 {
+  position: absolute;
+  top: 15vw;
+  left: 5vw;
+}
+
+.mat4 {
+  position: absolute;
+  top: 15vw;
+  left: 15vw;
+}
+
+.buttons {
+  position: absolute;
+  top: 30vw;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rolls-counter {
+  position: absolute;
+  top: 35vw;
+  left: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.rolls-remaining {
+  margin-left: 10px;
+  align-content: center;
+  justify-content: center;
+}
+
+/* Dice styling */
+.hidden {
+  display: none;
+}
+
+.dice {
+  width: 5vw;
+  height: auto;
+  position: absolute;
+  left: 2vw;
+  top: 2vw;
+}
+
+.hold {
+  opacity: 0.5;
+}
