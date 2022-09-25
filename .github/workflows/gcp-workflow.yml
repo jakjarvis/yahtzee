@@ -1,0 +1,22 @@
+# https://sha.ws/automatic-upload-to-google-cloud-storage-with-github-actions.html
+
+name: GSP - Push Repo # name of your workflow
+on:
+  push:
+    branches:
+      - master # Deployment will be triggered when we will push to the master branch
+
+# env:
+#   GCS_BUCKET: ${{ secrets.GCS_BUCKET }}
+
+jobs:
+  push-to-gcs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: google-github-actions/auth@v0
+        with:
+          service_account: "${{ secrets.GCP_SA_EMAIL }}"
+          credentials_json: "${{ secrets.GCP_SA_KEY }}"
+      - uses: google-github-actions/setup-gcloud@v0
+      - run: gsutil -m rsync -d -c -r . gs://jakjarvis-personal-page/yahtzee
